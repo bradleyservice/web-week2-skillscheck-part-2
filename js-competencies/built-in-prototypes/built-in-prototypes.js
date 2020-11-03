@@ -10,6 +10,7 @@
 //use the built-in array method .map
   
   //Code here
+let dragonMapper = arr => arr.map(e => `${e}...here be dragons`)
 
 
 
@@ -21,6 +22,7 @@
 //cookieLoversOnly should return the filtered array.
   
   //Code here
+let cookieLoversOnly = arr => arr.filter(elem => elem.hasOwnProperty("favoriteCookie"))
 
 
 //////////////////PROBLEM 3////////////////////
@@ -35,7 +37,7 @@
 
 
   //Code here
-
+let changeValue = (arr, cb) => arr.forEach(cb);
 
 
 //////////////////PROBLEM 4////////////////////
@@ -47,7 +49,7 @@
 //Return the product.
   
   //Code here
-
+const findProduct = (arr) => arr.reduce((acc, curr) => acc * curr)
 
 //////////////////PROBLEM 5////////////////////
 
@@ -64,7 +66,10 @@
 // cipherize will return: "d"
 
   //Code here
-
+const cipherize = (arr, str) => {
+  let num = arr.indexOf(str)
+  return str.charAt(num)
+}
 
 
 //////////////////PROBLEM 6////////////////////
@@ -75,3 +80,6 @@
 //apart, reversing it, and putting it back together again.
 
   //Code here
+const reverseMe = (str) => {
+  return str.split('').reverse().join('')
+}
